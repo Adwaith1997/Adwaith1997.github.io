@@ -3067,5 +3067,14 @@
 			flex-direction: column;
 			text-align: center;
 		}
+		.carousel-inner > .item > section,
+  		.carousel-inner > .item > a > section {
+      		width: 80%;
+      		height:500px;
+      		margin: auto;
+      	}
+  }
+
+
 
 	}
