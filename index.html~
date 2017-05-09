@@ -29,7 +29,7 @@
 		<!-- Banner -->
 			<section id="banner">
 				<h1>Welcome to Anveshak<h1>
-				<p><font color = "white">The Rover Team of IIT Madras</font></p>
+				<p><font color = "white" size = "2000">The Rover Team of IIT Madras</font></p>
 			</section>
 
 		<!-- One -->
@@ -185,18 +185,19 @@
 			<footer id="footer">
 				<div class="inner">
 					<div class="flex">
-					<!--	<div class="copyright">
-							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
-						</div> -->
+					
 						<ul class="icons">
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
-							<li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
-							<li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+							<li><a href="https://www.facebook.com/Anveshak.CFI.IITM/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://twitter.com/AnveshakIITM" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						 <li  a  href= "" class="social-google-plus">
+                      <span class ="label"><i class="fa fa-google-plus">Googleplus</i></a>
+                    					</li>
 						</ul>
 					</div>
 				</div>
+ 				<div class="container" style="text-align:center;color:#17232e;">
+                        <p>&copy;2017 Anveshak. All Rights Reserved.</p>
+                    </div>
 			</footer>
 
 		<!-- Scripts -->
@@ -204,6 +205,13 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+           <!-- preloader   
+                <script type="text/javascript">
+    $(window).load(function() {
+    // Animate loader off screen
+    $(".se-pre-con").fadeOut("slow");;
+    });
+  </script>
+   -->
 	</body>
 </html>
