@@ -3069,8 +3069,8 @@
 		}
 		.carousel-inner > .item > section,
   		.carousel-inner > .item > a > section {
-      		width: 80%;
-      		height:500px;
+      		width: 100%;
+      		height:auto;
       		margin: auto;
       	}
   }
