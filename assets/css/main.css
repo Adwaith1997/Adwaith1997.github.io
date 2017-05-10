@@ -2935,6 +2935,8 @@
 				color: inherit;
 			}
 
+
+
 /* Banner */
 
 	#banner {
@@ -3118,7 +3120,7 @@
   text-align: center;
 }
 #boxes #dialog {
-  width:1000px;
+  width:800px;
 	height: 3000px;
   height:auto;
   padding:10px;
