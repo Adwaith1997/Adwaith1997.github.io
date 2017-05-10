@@ -2549,6 +2549,7 @@
 		appearance: none;
 		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  /*  -webkit-box-shadow: 1px 1px 1px 1px #777, 0 0 0 8px #BBB, 0 0 0 11px #fff, 0 0 0 13px #333, 0px 2px 2px 16px #eee;*/
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		background-color: #5a5a5a;
