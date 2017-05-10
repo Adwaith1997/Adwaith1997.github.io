@@ -16,7 +16,7 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">Theory</a>
+				<!--	<a href="index.html" class="logo">Theory</a> -->
 					<nav id="nav">
 						<a href="index.html">Home</a>
 						<a href="generic.html">AURORA</a>
@@ -50,15 +50,108 @@ Software and System Integration
 Sponsorship and Public Relations
 These modules work collaboratively to make the team truly self-sustainable.
 					</p>
-					<div class="flex flex-2">
+				<!--	<div class="flex flex-2">-->
 						<article>
 						<!--	<div class="image fit">
 								<img src="images/pic01.jpg" alt="Pic 01" />
 							</div> -->
 							<header>
-								<h3></h3>
+								<h3><center>Techinal Details</h3>
 							</header>
-							<p></p>
+
+							<p><b>Chassis</b>
+								<br>The chassis was designed taking into account,
+								various dimensional and weight constraints from each module.
+								Having obtained a rough outline, we chose an Aluminium T-slot
+								framework because of its low weight and high strength to
+								withstand static and dynamic loads.
+								The <b>suspension</b> system is one of the most exciting features of our rover.
+							  The rear suspension, a spanner-shaped link interlocked by a spring, p
+								rovides a constrained degree of freedom. This increases the flexibility and
+								manoeuvrability of the rover.Wheels are a stack of aluminum plates,
+								held together using a fastener free interlock mechanism,
+								manufactured by laser cutting.
+								The wheels enclose the motors,
+							  protecting them from obstacles on the field.
+								<br>
+                <b>Manipulator</b>
+								The 4R robotic manipulator consists of a linear actuator attached to the rear of the rover
+								and manipulator links connected to the front to ensure better balance and distribution of
+								weight on the chassis. The second link rotation is achieved  by using a worm drive coupled
+								to a chain drive while, base rotation is brought about by using a worm drive coupled to a pair of
+								bevel gears. A forward kinematic analysis is performed to find the workspace of the end effector using Mathematica 11.0, based upon which the link lengths were chosen. The arm has a maximum reach of 50cm in-front of the mounting position and can reach up to 25cm below the base of the rover without  the end effector. All singularities were detected and avoided, for the plotted workspace. The arm links have been designed taking into account weight reduction and effective stress distribution
+                <br>
+	               <b>Digger</b>
+                The digger performs 3 functions - soil extraction, soil collection and soil testing.
+								<b><i>Design Description:</i> </b>The digger module consists of a drill bit coupled to a DC motor.
+								Temperature and moisture sensors are attached to a crosspiece which is perpendicular to the drill.
+								A custom-made sample collection box having 3 compartments, one for housing motors, one for storing excess soil
+								and another for collecting bottom soil into a cache container, surrounds the drill bit to collect the soil
+								extracted from the ground. A gear mechanism locks the cache container, after the soil is collected,
+								to ensure that the soil is not contaminated.
+                <br>
+								<b>Gripper</b>
+The gripper is an under-actuated system with 2 degrees of freedom provided by a single stepper motor.
+We have chosen a 3 digit system as it provides better grip for holding irregularly shaped objects and
+also enables us to easily rotate knobs. The assembly consists of a lead screw, enclosed within a casing.
+The lead screw is coupled to a lead nut which is connected to the digits & moves relative to the lead screw.
+The casing for the lead screw has a spring loaded locking system which couples or de-couples the lead screw
+to the lead nut and is operated by a solenoid actuator. When the solenoid is off, the lead nut gets coupled to the lead screw and moves the lead screw to & fro,  thereby actuating the gripping action. However, when the solenoid is switched on, the stepper motor rotates the lead nut along with the lead screw to achieve roll motion.
+<br>
+<br>
+<br>
+<b>Electrical Subsystem</b>:
+<br><b>Locomotion</b>
+The drive motors are controlled using 3 dual channel H-bridge motor drivers powered by 24V LiPo batteries providing an independent control of all the 6 DC motors. The analog input from the two axes of a joystick is converted  to different wheel velocities based on a 6 wheel differential drive model. A zero radius turn has been included for key sharp turns.
+<br><b><i>Current Status & Future Scope:</i></b>
+We plan to get a PID control over wheel velocities for more effective manual control and autonomous traversal tasks through quadrature encoders fitted to the shaft of the motors.
+<br>
+<b>Battery Management & Distribution System :</b>
+A decentralized power distribution system to power the active and passive elements of the rover separately, enabling us to cut off the power supply, using a MOSFET based kill-switch and not affect the communication with the base station. Currently we are using a combination of 24V and 12V LiPo batteries for various motors, actuators, access points and the onboard computer.
+We have a battery management system which can be remotely monitored. A custom PCB has been designed to acquire voltages of each of the LiPo battery. We have isolated the electronics from power distribution to avoid disruptive effects from high power surges and meltdowns  using protective circuits.
+<br><i><b>Current Status & Future Scope:</i></b>
+We are planning to improvise on the power distribution and cooling system to increase the effective working duration of the rover.
+<br>
+<b>Main controller board</b>
+The Main Controller Board consists of two Arduino Mega microcontrollers, one used for Arm and Sensors module and another handles drive and miscellaneous tasks such as controlling Pan-Tilt motion of on-board cameras.
+The schematics and boards for PCBs were designed using the EAGLE software. A robust and compact design of the PCBs helped us stack and fit them easily even on tiny parts of the gripper and the mimic arm.
+<br>
+<b>Communication</b>
+We are using two off the shelf TP LINK WA5210G routers for communication, which operate in the 2.4 GHz ISM Band over multiple channels to counteract interference issues. These routers are able to provide a reliable communication link in LOS conditions for up to 1 kilometer of range. To tackle the issues of non-LOS, we are incorporating the use of external high gain antennas to boost  transmission signals and achieve successful communication over long distances. For robust video transmission, we are making use of motion package which is compatible with any Linux distribution and enables to transmit the camera capture over a local network with minimal lag and high resolution.
+We are using 3 SJCAM5000+ action cameras to get information about the surroundings of the rover.  One camera will be mounted on the Chassis, one on the arm and another camera will be attached to the bottom of the rover.
+<br><b>Current Status & Future Scope:</b> We are planning on building an algorithm which orients the antennas on based on the traces of the received signal strength indicator for dynamic router positioning for maximum communication fidelity.
+<br><br><br>
+<b>Software and system integration</b>
+For the purposes of a scalable solution for control of the rover and integration, we are using ROS framework to make a meta package in ROS.  The manual control of the rover is done using a joystick which commissions commands to the rover The communication of commands from one node to other nodes is done using the TCP/IP stack. For the autonomous tasks  we make use of various sensors like LIDAR, GPS and IMU sensors and wheel encoders onboard the rover.
+Laserscan generated by LIDAR is used to make the costmap. GPS coordinates are converted into coordinates in robot world frame and are used to set the navigation goal for the rover. The data from IMU and Wheel encoders is fused to generate the odometry frame which is used for the state estimation. The sensors data is fused using Extended Kalman Filter. ROS navigation stack is used to take information from odometry, sensor streams, and goal pose to produce safe velocity commands that are sent to the rover.
+<br><br><br>
+<b>Science Plan</b>
+
+
+The Science plan of Team Anveshak is geared towards predicting possibility of sustenance of life on Martian soil based on the nutrients and minerals present in the soil. Therefore we will be testing soil for the 6 key elements which are the building blocks of life- H, C, N, O, P, S and their combinations [1].
+<br>
+On-Board Sensors & Testing
+<br><b><i>Soil Temperature:</b></i>
+The temperature of soil significantly affects all chemical and biological processes that occur within the soil. For sustaining life, temperatures between 10oC and 60oC are ideal, although few organisms have been found to survive at temperatures as extreme as -15oC to 122oC [2]. We will be using an off the shelf temperature probe to collect soil temperature data.
+<br><b><i>Soil Moisture:</b></i>
+We are using a moisture sensor which associates the electrical resistivity of soil to its moisture content to measure the percentage of water in the soil sample.
+The water content in soil can be directly correlated with the amount of dissolved compounds present in the soil. As plants can absorb nutrients in the form of ions through its roots, presence of water is vital for growth of plants. Also, as water has very high heat capacity, it helps in regulating soil temperature.
+
+<br>Base Station Testing
+<br><b><i>pH Test:</b></i>
+We will use a pH probe to measure the pH of the soil sample quickly and accurately.
+The pH of the soil specifically affects the nutrient availability in the soil. Alkaline pH points towards presence of basic ions or the presence of Lewis bases such as CO32-.
+
+Acidic pH indicates the presence of acidic ions such as Al3+, NH4+, etc. In general, plants require pH between 4 and 9 for survival. Therefore, by measuring the pH, we can predict the kind of life forms which can exist in the Martian environment.
+
+<br>Inorganic Analysis
+<br><b><i>Nitrates: </b></i>The Nitrogen present in the soil in the form of ions is absorbed by the roots of the plants and are critical for formation of proteins. We are using a nitrachek meter to obtain a quick measure of nitrogen content in soil.
+Carbonates: Carbonate presence in soil ensures that the pH of soil is relatively stable as it is an excellent buffer. Also, carbonates in soil are generally found near sources of water. To test for carbonates, we are using a standard solution of HCl, which when added to soil causes effervescence if carbonates are present [3].
+We are also planning to test for phosphates, sulphates & ammonium as these are key macronutrients vital for supporting life.
+Transportation of Chemicals: We will be transporting & storing all chemicals in commercial off-the-shelf storage containers.
+
+
+							</p>
 							<footer>
 					<!--			<a href="#" class="button special">More</a> -->
 							</footer>
@@ -68,9 +161,14 @@ These modules work collaboratively to make the team truly self-sustainable.
 								<img src="images/pic02.jpg" alt="Pic 02" />
 							</div> -->
 							<header>
-								<h3></h3>
+								<h3><center>Sponsorship & PR</h3>
 							</header>
-							<p></p>
+							<p>
+<b>Sponsorship and Public Relations Team</b>
+The team’s PR campaigns have been successful in raising the funds required, through our generous alumni network, for the making of our rover, as well as for travel.
+<br>
+<a href="http://alumni.iitm.ac.in/wp-content/uploads/2017/04/Brochure.pdf"><b>Click here to proceed to the  brochure for Alumni Relations</b></a>
+</p>
 							<footer>
 							<!--	<a href="#" class="button special">More</a> -->
 							</footer>
