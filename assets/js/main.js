@@ -36,7 +36,7 @@
 		//Set the popup window to center
 		$(id).css('top',  winH/2-$(id).height()/2);
 		$(id).css('left', winW/2-$(id).width()/2);
-	
+
 		//transition effect
 		$(id).fadeIn(2000);
 
@@ -106,5 +106,31 @@
 					.css('transition', 'none');
 
 	});
+// progressive jQuery image loading plugin
+
+// Create a new ImageLoader instance
+
+var imageLoader = $.ImageLoader(),
+
+    $images     = $('.image'),
+
+    imgs        = [
+
+        '1.jpg', // Image url
+
+        $images[0], // <img> element
+
+        $images[1] // Element has a 'background-image'
+
+    ];
+imageLoader
+    .load(imgs) // Start load images
+    .progress(function (img) {
+        console.log('Loading(' + img.percentage + '%)...', img);
+    })
+    .done(function (img) {
+        console.log('All images loaded!', img);
+    });
+
 
 })(jQuery);
