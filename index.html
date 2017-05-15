@@ -7,27 +7,40 @@
 		<title>Anveshak IIT Madras</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
   		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-  		<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>  		
+  		<script type="text/javascript">
+    		$(window).load(function() {
+    		// Animate loader off screen
+    		$(".se-pre-con").fadeOut("slow");
+    		});
+  		</script>
+  		
 
 	</head>
 	<body>
 		<div class="se-pre-con"></div>
 		<!-- Header -->
-
+		<div>
 			<header id="header">
 				<div class="inner">
 					<a href="index.html" class="logo"><img src="images/logo.png" style="width:75px; height: 75px;"/></a>
 					<nav id="nav">
 						<a href="index.html"><h4>HOME</h4></a>
 						<a href="generic.html"><h4>AURORA</h4></a>
-						<a href="#"><h4>BLOG<h4></a>
+						<a href="#"><h4>BLOG</h4></a>
 					</nav>
-					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+					<a href="#navPanel" class="navPanelToggle" style="font-size=20px;" ><span class="fa fa-bars"></span></a>
 				</div>
 			</header>
 
@@ -441,56 +454,6 @@
  					 </div>
  					 </section>
  									 </div>
-<!--
-									 <div class="item">
-									 	<section id="two" class="wrapper style1 special" alt="Chania">
-									 <div class="inner">
-									 <header>
-									 <h2>The Team</h2>
-									 </header>
-									 <div class="flex flex-4">
-									 <div class="box person">
-									 <div class="img-circle">
-									 <img src="images/profile.jpg" alt="Person 1" />
-									 </div>
-									 <h3>Siddharth</h3>
-									 <p>Spons and PR</p>
-									 <a href="https://www.facebook.com/Anveshak.CFI.IITM/" class="icon fa-facebook" style="color:#FFF;"><span class="label">Facebook</span></a>
-									 <a href="https://twitter.com/AnveshakIITM" class="icon fa-twitter" style="color:#FFF;"><span class="label">Twitter</span></a>
-									 </div>
-									 <div class="box person">
-									 <div class="img-circle">
-									 <img src="images/Moksh.jpg" alt="Person 2" />
-									 </div>
-									 <h3>Moksh</h3>
-									 <p>Science</p>
-									 <a href="https://www.facebook.com/Anveshak.CFI.IITM/" class="icon fa-facebook" style="color:#FFF;"><span class="label">Facebook</span></a>
-									 <a href="https://twitter.com/AnveshakIITM" class="icon fa-twitter" style="color:#FFF;"><span class="label">Twitter</span></a>
-									 </div>
-
-									 <div class="box person">
-									 <div class="img-circle">
-									 <img src="images/profile.jpg" alt="Person 3" />
-									 </div>
-									 <h3>Rahil</h3>
-									 <p>Communications</p>
-									 <a href="https://www.facebook.com/Anveshak.CFI.IITM/" class="icon fa-facebook" style="color:#FFF;"><span class="label">Facebook</span></a>
-									 <a href="https://twitter.com/AnveshakIITM" class="icon fa-twitter" style="color:#FFF;"><span class="label">Twitter</span></a>
-									 </div>
-									 <div class="box person">
-									 <div class="img-circle">
-									 <img src="images/profile.jpg" alt="Person 4" />
-									 </div>
-									 <h3>Naveen</h3>
-									 <p>Science</p>
-									 <a href="https://www.facebook.com/Anveshak.CFI.IITM/" class="icon fa-facebook" style="color:#FFF;"><span class="label">Facebook</span></a>
-									 <a href="https://twitter.com/AnveshakIITM" class="icon fa-twitter" style="color:#FFF;"><span class="label">Twitter</span></a>
-									 </div>
-									 </div>
-									 </div>
-									 </section>
-									 </div>
--->
 										<a class="left carousel-control" href="#carousel" data-slide="prev">
 			 <span class="glyphicon glyphicon-chevron-left"></span>
 			 <span class="sr-only">Previous</span>
@@ -535,7 +498,7 @@
 			</section>
 		<!-- FOUR -->
 					<center><img  src="images/facebook_anveshak.jpg" alt="Pic 02"  style="width:65%; height=50%;"/></center>
-					<center><a class="agree" style="color:red;" href="http://100pins.com/lists/iitm/payments/university-rover-challenge">Support us</a> </center>
+					<center><a class="agree" style="color:red;" href="http://100pins.com/lists/iitm/payments/university-rover-challenge"><h3 style="color:red;">Support us</h3></a> </center>
 			<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
@@ -555,12 +518,7 @@
                     </div>
 			</footer>
 
-  <script type="text/javascript">
-    $(window).load(function() {
-    // Animate loader off screen
-    $(".se-pre-con").fadeOut("slow");;
-    });
-  </script>
 
+		</div>
 	</body>
 </html>
